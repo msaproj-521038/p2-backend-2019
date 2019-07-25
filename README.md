@@ -3,6 +3,7 @@ API for my Phase 2 of MSA
 
 ## Information
 Current Database Format:
+
 | Parameter  | Data Type  | Unique |
 |---|---|---|
 | ID  | int  | YES  |
