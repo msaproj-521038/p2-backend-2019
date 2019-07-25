@@ -3,13 +3,16 @@ API for my Phase 2 of MSA
 
 ## Information
 Current Database Format:
-* ID UNIQUE INT
-* MODELNUMBER STRING
-* MODELNAME STRING
-* COMPANY STRING
-* PROCESSOR STRING
-* BATTERYRATING INT
-* PHONELENGTH REAL
-* PHONEWIDTH REAL
-* SCREENLENGTH REAL
-* SCREENWIDTH REAL
+| Parameter  | Data Type  | Unique |
+|---|---|---|
+| ID  | int  | YES  |
+| ModelNumber  | string  | NO  |
+| ModelName  | string  |  NO  |
+| Company  | string  | NO   |
+| Processor  | string  | NO   |
+| BatteryRating  |  int | NO   |
+| PhoneLength  | real  | NO   |
+| PhoneWidth  | real  | NO   |
+| ScreenLength  | real  | NO   |
+| ScreenWidth  | real  | NO   |
+
