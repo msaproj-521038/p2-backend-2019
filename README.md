@@ -17,3 +17,6 @@ Current Database Format:
 | ScreenLength  | real  | NO   |
 | ScreenWidth  | real  | NO   |
 
+Current plans:
+* BatteryRating to be in mAh
+* All length and widths to be in mm
