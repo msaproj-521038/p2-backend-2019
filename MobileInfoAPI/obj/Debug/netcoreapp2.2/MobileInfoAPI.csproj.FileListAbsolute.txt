@@ -40,3 +40,17 @@ C:\Users\kenyo\Documents\GitHub\MSA-P2\API\MobileInfoAPI\obj\Debug\netcoreapp2.2
 C:\Users\kenyo\Documents\GitHub\MSA-P2\API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.RazorTargetAssemblyInfo.cache
 C:\Users\kenyo\Documents\GitHub\MSA-P2\API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.dll
 C:\Users\kenyo\Documents\GitHub\MSA-P2\API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.pdb
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\bin\Debug\netcoreapp2.2\MobileInfoAPI.deps.json
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\bin\Debug\netcoreapp2.2\MobileInfoAPI.runtimeconfig.json
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\bin\Debug\netcoreapp2.2\MobileInfoAPI.runtimeconfig.dev.json
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\bin\Debug\netcoreapp2.2\MobileInfoAPI.dll
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\bin\Debug\netcoreapp2.2\MobileInfoAPI.pdb
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.csprojAssemblyReference.cache
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.csproj.CoreCompileInputs.cache
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.RazorAssemblyInfo.cache
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.RazorAssemblyInfo.cs
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.AssemblyInfoInputs.cache
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.AssemblyInfo.cs
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.RazorTargetAssemblyInfo.cache
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.dll
+C:\Users\kenyo\Documents\GitHub\MSA-P2-API\MobileInfoAPI\obj\Debug\netcoreapp2.2\MobileInfoAPI.pdb
