@@ -13397,11 +13397,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2\\API\\MobileInfoAPI\\MobileInfoAPI.csproj",
+      "projectUniqueName": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2-API\\MobileInfoAPI\\MobileInfoAPI.csproj",
       "projectName": "MobileInfoAPI",
-      "projectPath": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2\\API\\MobileInfoAPI\\MobileInfoAPI.csproj",
+      "projectPath": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2-API\\MobileInfoAPI\\MobileInfoAPI.csproj",
       "packagesPath": "C:\\Users\\kenyo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2\\API\\MobileInfoAPI\\obj\\",
+      "outputPath": "C:\\Users\\kenyo\\Documents\\GitHub\\MSA-P2-API\\MobileInfoAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
