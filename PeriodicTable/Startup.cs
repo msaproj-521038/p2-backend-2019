@@ -64,7 +64,7 @@ namespace PeriodicTable
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Periodic Table API v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Periodic Table API");
                 c.RoutePrefix = string.Empty; // launch swagger from root
             });
         }
