@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using PeriodicTable.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace PeriodicTable
 {
@@ -32,6 +33,12 @@ namespace PeriodicTable
 
             services.AddDbContext<PeriodicTableContext>(options =>
                     options.UseSqlite(Configuration.GetConnectionString("PeriodicTableContext")));
+
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Periodic Elements Bank", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +56,17 @@ namespace PeriodicTable
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), 
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Periodic Table API v1");
+                c.RoutePrefix = string.Empty; // launch swagger from root
+            });
         }
     }
 }
