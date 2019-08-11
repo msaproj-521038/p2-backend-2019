@@ -1,22 +1,26 @@
 # MSA-P2-API
-API for my Phase 2 of MSA
+Periodic Table API for my Phase 2 of MSA
 
 ## Information
 Current Database Format:
 
 | Parameter  | Data Type  | Unique |
 |---|---|---|
-| ID  | int  | YES  |
-| ModelNumber  | string  | NO  |
-| ModelName  | string  |  NO  |
-| Company  | string  | NO   |
-| Processor  | string  | NO   |
-| BatteryRating  |  int | NO   |
-| PhoneLength  | real  | NO   |
-| PhoneWidth  | real  | NO   |
-| ScreenLength  | real  | NO   |
-| ScreenWidth  | real  | NO   |
+| AtomicNumber  | int  | YES  |
+| Name  | string  | NO  |
+| Symbol  | string  |  NO  |
+| AtomicMass  | string  | NO   |
+| AtomicRadius  | string  | NO   |
+| GroupBlock  | string  | NO   |
+| BondingType  | string  | NO   |
+| ElectronConfiguration  | string  | NO   |
+| FirstIonisationEnergy  | string  | NO   |
+| MeltingPoint  | string  | NO   |
+| BoilingPoint  | string  | NO   |
 
-Current plans:
-* BatteryRating to be in mAh
-* All length and widths to be in mm
+## References
+
+#### Most or part of the data were obtained from these sources:
+* IB Diploma Programme (2014). Chemistry Data Booklet.
+* Bowserinator, Periodic-Table-JSON (2019). [GitHub Repository](https://github.com/Bowserinator/Periodic-Table-JSON)
+* andrejewski, periodic-table (2019). [GitHub Repository](https://github.com/andrejewski/periodic-table)
