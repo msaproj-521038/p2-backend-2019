@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MobileInfoAPI.Models;
+using PeriodicTable.Models;
 
-namespace MobileInfoAPI
+namespace PeriodicTable
 {
     public class Program
     {
@@ -25,9 +25,9 @@ namespace MobileInfoAPI
 
                 try
                 {
-                    var context = services.GetRequiredService<MobileInfoAPIContext>();
+                    var context = services.GetRequiredService<PeriodicTableContext>();
                     context.Database.Migrate();
-                    SamplePhoneSpec.Initialize(services);
+                    Data.Initialize(services);
                 }
                 catch (Exception ex)
                 {
