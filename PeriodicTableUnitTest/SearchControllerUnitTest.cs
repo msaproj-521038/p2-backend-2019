@@ -127,7 +127,7 @@ namespace PeriodicTableUnitTest
         }
 
         [TestMethod]
-        public async Task TestGetSuccessfully()
+        public async Task TestGetElementsSuccessfully()
         {
             using (var context = new PeriodicTableContext(options))
             {
@@ -136,6 +136,32 @@ namespace PeriodicTableUnitTest
 
                 // Check that the results are returned
                 Assert.IsNotNull(result);
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSearchByNameSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helium");
+
+                // Check that the results are returned
+                Assert.IsNotNull(result);
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSearchByNameReturnsNullSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helim");
+
+                // Check that the results are returned
+                Assert.IsNull(result);
             }
         }
 
