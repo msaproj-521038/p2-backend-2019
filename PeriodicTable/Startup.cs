@@ -11,8 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using PeriodicTable.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using PeriodicTable.Models;
 
 namespace PeriodicTable
 {
@@ -32,13 +32,14 @@ namespace PeriodicTable
             options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
 
             services.AddDbContext<PeriodicTableContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("PeriodicTableContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("PeriodicTableContext")));
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Periodic Elements Bank", Version = "v1" });
             });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
