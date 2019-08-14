@@ -131,7 +131,7 @@ namespace PeriodicTable.Controllers
             return CreatedAtAction("GetElement", new { id = element.AtomicNumber }, element);
         }
 
-        // DELETE: api/Elements/5
+        // DELETE: api/Elements/id/5
         [HttpDelete("id/{id}")]
         public async Task<ActionResult<Element>> DeleteElement(int id)
         {
