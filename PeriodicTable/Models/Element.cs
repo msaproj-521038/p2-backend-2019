@@ -22,6 +22,8 @@ namespace PeriodicTable.Models
         public string AtomicMass { get; set; }
         public string AtomicRadius { get; set; }
         public string FirstIonisationEnergy { get; set; }
+        public int X_Position {get; set; }
+        public int Y_Position { get; set; }
         public string MeltingPoint { get; set; }
         public string BoilingPoint { get; set; }
     }

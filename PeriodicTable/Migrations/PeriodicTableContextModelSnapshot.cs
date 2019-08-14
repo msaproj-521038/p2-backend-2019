@@ -42,6 +42,10 @@ namespace PeriodicTable.Migrations
                     b.Property<string>("Symbol")
                         .IsRequired();
 
+                    b.Property<int>("X_Position");
+
+                    b.Property<int>("Y_Position");
+
                     b.HasKey("AtomicNumber");
 
                     b.ToTable("Element");

@@ -32,6 +32,8 @@ namespace PeriodicTable.Models
                         BondingType = "diatomic",
                         ElectronConfiguration = "1s1",
                         FirstIonisationEnergy = "1312.0",
+                        X_Position = 1,
+                        Y_Position = 1,
                         MeltingPoint = "14",
                         BoilingPoint = "20"
                     },
@@ -47,6 +49,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "1s2",
                         FirstIonisationEnergy = "2372.0",
+                        X_Position = 18,
+                        Y_Position = 1,
                         MeltingPoint = "1",
                         BoilingPoint = "4"
                     },
@@ -62,6 +66,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[He] 2s1",
                         FirstIonisationEnergy = "520.0",
+                        X_Position = 1,
+                        Y_Position = 2,
                         MeltingPoint = "454",
                         BoilingPoint = "1615"
                     },
@@ -77,6 +83,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[He] 2s2",
                         FirstIonisationEnergy = "900.0",
+                        X_Position = 2,
+                        Y_Position = 2,
                         MeltingPoint = "1560",
                         BoilingPoint = "2743"
                     },
@@ -92,6 +100,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[He] 2s2 2p1",
                         FirstIonisationEnergy = "801.0",
+                        X_Position = 13,
+                        Y_Position = 2,
                         MeltingPoint = "2348",
                         BoilingPoint = "4273"
                     },
@@ -107,6 +117,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[He] 2s2 2p2",
                         FirstIonisationEnergy = "1086.0",
+                        X_Position = 14,
+                        Y_Position = 2,
                         MeltingPoint = "3823",
                         BoilingPoint = "4300"
                     },
@@ -122,6 +134,8 @@ namespace PeriodicTable.Models
                         BondingType = "diatomic",
                         ElectronConfiguration = "[He] 2s2 2p3",
                         FirstIonisationEnergy = "1402.0",
+                        X_Position = 15,
+                        Y_Position = 2,
                         MeltingPoint = "63",
                         BoilingPoint = "77"
                     },
@@ -137,6 +151,8 @@ namespace PeriodicTable.Models
                         BondingType = "diatomic",
                         ElectronConfiguration = "[He] 2s2 2p4",
                         FirstIonisationEnergy = "1314.0",
+                        X_Position = 16,
+                        Y_Position = 2,
                         MeltingPoint = "55",
                         BoilingPoint = "90"
                     },
@@ -152,6 +168,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[He] 2s2 2p5",
                         FirstIonisationEnergy = "1681.0",
+                        X_Position = 17,
+                        Y_Position = 2,
                         MeltingPoint = "54",
                         BoilingPoint = "85"
                     },
@@ -167,6 +185,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[He] 2s2 2p6",
                         FirstIonisationEnergy = "2081.0",
+                        X_Position = 18,
+                        Y_Position = 2,
                         MeltingPoint = "25",
                         BoilingPoint = "27"
                     },
@@ -182,6 +202,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ne] 3s1",
                         FirstIonisationEnergy = "496.0",
+                        X_Position = 1,
+                        Y_Position = 3,
                         MeltingPoint = "371",
                         BoilingPoint = "1156"
                     },
@@ -197,6 +219,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ne] 3s2",
                         FirstIonisationEnergy = "738.0",
+                        X_Position = 2,
+                        Y_Position = 3,
                         MeltingPoint = "923",
                         BoilingPoint = "1363"
                     },
@@ -208,10 +232,12 @@ namespace PeriodicTable.Models
                         Symbol = "Al",
                         AtomicMass = "26.982",
                         AtomicRadius = "118",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ne] 3s2 3p1",
                         FirstIonisationEnergy = "578.0",
+                        X_Position = 13,
+                        Y_Position = 3,
                         MeltingPoint = "933",
                         BoilingPoint = "2792"
                     },
@@ -227,6 +253,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ne] 3s2 3p2",
                         FirstIonisationEnergy = "786.0",
+                        X_Position = 14,
+                        Y_Position = 3,
                         MeltingPoint = "1687",
                         BoilingPoint = "3173"
                     },
@@ -242,6 +270,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Ne] 3s2 3p3",
                         FirstIonisationEnergy = "1012.0",
+                        X_Position = 15,
+                        Y_Position = 3,
                         MeltingPoint = "317",
                         BoilingPoint = "554"
                     },
@@ -257,6 +287,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Ne] 3s2 3p4",
                         FirstIonisationEnergy = "1000.0",
+                        X_Position = 16,
+                        Y_Position = 3,
                         MeltingPoint = "388",
                         BoilingPoint = "718"
                     },
@@ -272,6 +304,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Ne] 3s2 3p5",
                         FirstIonisationEnergy = "1251.0",
+                        X_Position = 17,
+                        Y_Position = 3,
                         MeltingPoint = "172",
                         BoilingPoint = "239"
                     },
@@ -287,6 +321,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[Ne] 3s2 3p6",
                         FirstIonisationEnergy = "1521.0",
+                        X_Position = 18,
+                        Y_Position = 3,
                         MeltingPoint = "84",
                         BoilingPoint = "87"
                     },
@@ -302,6 +338,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 4s1",
                         FirstIonisationEnergy = "419.0",
+                        X_Position = 1,
+                        Y_Position = 4,
                         MeltingPoint = "337",
                         BoilingPoint = "1032"
                     },
@@ -317,6 +355,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 4s2",
                         FirstIonisationEnergy = "590.0",
+                        X_Position = 2,
+                        Y_Position = 4,
                         MeltingPoint = "1115",
                         BoilingPoint = "1757"
                     },
@@ -332,6 +372,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d1 4s2",
                         FirstIonisationEnergy = "633.0",
+                        X_Position = 3,
+                        Y_Position = 4,
                         MeltingPoint = "1814",
                         BoilingPoint = "3103"
                     },
@@ -347,6 +389,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d2 4s2",
                         FirstIonisationEnergy = "659.0",
+                        X_Position = 4,
+                        Y_Position = 4,
                         MeltingPoint = "1941",
                         BoilingPoint = "3560"
                     },
@@ -362,6 +406,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d3 4s2",
                         FirstIonisationEnergy = "651.0",
+                        X_Position = 5,
+                        Y_Position = 4,
                         MeltingPoint = "2183",
                         BoilingPoint = "3680"
                     },
@@ -377,6 +423,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d5 4s1",
                         FirstIonisationEnergy = "653.0",
+                        X_Position = 6,
+                        Y_Position = 4,
                         MeltingPoint = "2180",
                         BoilingPoint = "2944"
                     },
@@ -392,6 +440,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d5 4s2",
                         FirstIonisationEnergy = "717.0",
+                        X_Position = 7,
+                        Y_Position = 4,
                         MeltingPoint = "1519",
                         BoilingPoint = "2334"
                     },
@@ -407,6 +457,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d6 4s2",
                         FirstIonisationEnergy = "762.0",
+                        X_Position = 8,
+                        Y_Position = 4,
                         MeltingPoint = "1811",
                         BoilingPoint = "3134"
                     },
@@ -422,6 +474,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d7 4s2",
                         FirstIonisationEnergy = "760.0",
+                        X_Position = 9,
+                        Y_Position = 4,
                         MeltingPoint = "1768",
                         BoilingPoint = "3200"
                     },
@@ -437,6 +491,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d8 4s2",
                         FirstIonisationEnergy = "737.0",
+                        X_Position = 10,
+                        Y_Position = 4,
                         MeltingPoint = "1728",
                         BoilingPoint = "3186"
                     },
@@ -452,6 +508,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s1",
                         FirstIonisationEnergy = "746.0",
+                        X_Position = 11,
+                        Y_Position = 4,
                         MeltingPoint = "1358",
                         BoilingPoint = "3200"
                     },
@@ -467,6 +525,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s2",
                         FirstIonisationEnergy = "906.0",
+                        X_Position = 12,
+                        Y_Position = 4,
                         MeltingPoint = "693",
                         BoilingPoint = "1180"
                     },
@@ -478,10 +538,12 @@ namespace PeriodicTable.Models
                         Symbol = "Ga",
                         AtomicMass = "69.723",
                         AtomicRadius = "126",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p1",
                         FirstIonisationEnergy = "579.0",
+                        X_Position = 13,
+                        Y_Position = 4,
                         MeltingPoint = "303",
                         BoilingPoint = "2477"
                     },
@@ -497,6 +559,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p2",
                         FirstIonisationEnergy = "762",
+                        X_Position = 14,
+                        Y_Position = 4,
                         MeltingPoint = "1211",
                         BoilingPoint = "3093"
                     },
@@ -512,6 +576,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p3",
                         FirstIonisationEnergy = "947.0",
+                        X_Position = 15,
+                        Y_Position = 4,
                         MeltingPoint = "1090",
                         BoilingPoint = "887"
                     },
@@ -527,6 +593,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p4",
                         FirstIonisationEnergy = "941.0",
+                        X_Position = 16,
+                        Y_Position = 4,
                         MeltingPoint = "494",
                         BoilingPoint = "958"
                     },
@@ -542,6 +610,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p5",
                         FirstIonisationEnergy = "1140.0",
+                        X_Position = 17,
+                        Y_Position = 4,
                         MeltingPoint = "266",
                         BoilingPoint = "332"
                     },
@@ -557,6 +627,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[Ar] 3d10 4s2 4p6",
                         FirstIonisationEnergy = "1351.0",
+                        X_Position = 18,
+                        Y_Position = 4,
                         MeltingPoint = "116",
                         BoilingPoint = "120"
                     },
@@ -572,6 +644,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 5s1",
                         FirstIonisationEnergy = "403.0",
+                        X_Position = 1,
+                        Y_Position = 5,
                         MeltingPoint = "312",
                         BoilingPoint = "961"
                     },
@@ -587,6 +661,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 5s2",
                         FirstIonisationEnergy = "550.0",
+                        X_Position = 2,
+                        Y_Position = 5,
                         MeltingPoint = "1050",
                         BoilingPoint = "1655"
                     },
@@ -602,6 +678,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d1 5s2",
                         FirstIonisationEnergy = "600",
+                        X_Position = 3,
+                        Y_Position = 5,
                         MeltingPoint = "1799",
                         BoilingPoint = "3618"
                     },
@@ -617,6 +695,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d2 5s2",
                         FirstIonisationEnergy = "640.0",
+                        X_Position = 4,
+                        Y_Position = 5,
                         MeltingPoint = "2128",
                         BoilingPoint = "4682"
                     },
@@ -632,6 +712,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d4 5s1",
                         FirstIonisationEnergy = "652.0",
+                        X_Position = 5,
+                        Y_Position = 5,
                         MeltingPoint = "2750",
                         BoilingPoint = "5017"
                     },
@@ -647,6 +729,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d5 5s1",
                         FirstIonisationEnergy = "684.0",
+                        X_Position = 6,
+                        Y_Position = 5,
                         MeltingPoint = "2896",
                         BoilingPoint = "4912"
                     },
@@ -662,6 +746,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d5 5s2",
                         FirstIonisationEnergy = "702",
+                        X_Position = 7,
+                        Y_Position = 5,
                         MeltingPoint = "2430",
                         BoilingPoint = "4538"
                     },
@@ -677,6 +763,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d7 5s1",
                         FirstIonisationEnergy = "710.0",
+                        X_Position = 8,
+                        Y_Position = 5,
                         MeltingPoint = "2607",
                         BoilingPoint = "4423"
                     },
@@ -692,6 +780,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d8 5s1",
                         FirstIonisationEnergy = "720.0",
+                        X_Position = 9,
+                        Y_Position = 5,
                         MeltingPoint = "2237",
                         BoilingPoint = "3968"
                     },
@@ -707,6 +797,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10",
                         FirstIonisationEnergy = "804.0",
+                        X_Position = 10,
+                        Y_Position = 5,
                         MeltingPoint = "1828",
                         BoilingPoint = "3236"
                     },
@@ -722,6 +814,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s1",
                         FirstIonisationEnergy = "731.0",
+                        X_Position = 11,
+                        Y_Position = 5,
                         MeltingPoint = "1235",
                         BoilingPoint = "2435"
                     },
@@ -737,6 +831,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s2",
                         FirstIonisationEnergy = "868.0",
+                        X_Position = 12,
+                        Y_Position = 5,
                         MeltingPoint = "594",
                         BoilingPoint = "1040"
                     },
@@ -748,10 +844,12 @@ namespace PeriodicTable.Models
                         Symbol = "In",
                         AtomicMass = "114.818",
                         AtomicRadius = "144",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p1",
                         FirstIonisationEnergy = "558.0",
+                        X_Position = 13,
+                        Y_Position = 5,
                         MeltingPoint = "430",
                         BoilingPoint = "2345"
                     },
@@ -763,10 +861,12 @@ namespace PeriodicTable.Models
                         Symbol = "Sn",
                         AtomicMass = "118.711",
                         AtomicRadius = "141",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p2",
                         FirstIonisationEnergy = "709.0",
+                        X_Position = 14,
+                        Y_Position = 5,
                         MeltingPoint = "505",
                         BoilingPoint = "2875"
                     },
@@ -782,6 +882,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p3",
                         FirstIonisationEnergy = "834",
+                        X_Position = 15,
+                        Y_Position = 5,
                         MeltingPoint = "904",
                         BoilingPoint = "1860"
                     },
@@ -797,6 +899,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p4",
                         FirstIonisationEnergy = "869.0",
+                        X_Position = 16,
+                        Y_Position = 5,
                         MeltingPoint = "723",
                         BoilingPoint = "1261"
                     },
@@ -812,6 +916,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p5",
                         FirstIonisationEnergy = "1008.0",
+                        X_Position = 17,
+                        Y_Position = 5,
                         MeltingPoint = "387",
                         BoilingPoint = "457"
                     },
@@ -827,6 +933,8 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[Kr] 4d10 5s2 5p6",
                         FirstIonisationEnergy = "1170.0",
+                        X_Position = 18,
+                        Y_Position = 5,
                         MeltingPoint = "161",
                         BoilingPoint = "165"
                     },
@@ -842,6 +950,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 6s1",
                         FirstIonisationEnergy = "376.0",
+                        X_Position = 1,
+                        Y_Position = 6,
                         MeltingPoint = "302",
                         BoilingPoint = "944"
                     },
@@ -857,6 +967,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 6s2",
                         FirstIonisationEnergy = "503.0",
+                        X_Position = 2,
+                        Y_Position = 6,
                         MeltingPoint = "1000",
                         BoilingPoint = "2143"
                     },
@@ -872,6 +984,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 5d1 6s2",
                         FirstIonisationEnergy = "538.0",
+                        X_Position = 3,
+                        Y_Position = 9,
                         MeltingPoint = "1193",
                         BoilingPoint = "3737"
                     },
@@ -887,6 +1001,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f1 5d1 6s2",
                         FirstIonisationEnergy = "534.0",
+                        X_Position = 4,
+                        Y_Position = 9,
                         MeltingPoint = "1071",
                         BoilingPoint = "3633"
                     },
@@ -902,6 +1018,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f3 6s2",
                         FirstIonisationEnergy = "527",
+                        X_Position = 5,
+                        Y_Position = 9,
                         MeltingPoint = "1204",
                         BoilingPoint = "3563"
                     },
@@ -917,6 +1035,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f4 6s2",
                         FirstIonisationEnergy = "533.0",
+                        X_Position = 6,
+                        Y_Position = 9,
                         MeltingPoint = "1294",
                         BoilingPoint = "3373"
                     },
@@ -932,6 +1052,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f5 6s2",
                         FirstIonisationEnergy = "540",
+                        X_Position = 7,
+                        Y_Position = 9,
                         MeltingPoint = "1373",
                         BoilingPoint = "3273"
                     },
@@ -947,6 +1069,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f6 6s2",
                         FirstIonisationEnergy = "544.0",
+                        X_Position = 8,
+                        Y_Position = 9,
                         MeltingPoint = "1345",
                         BoilingPoint = "2076"
                     },
@@ -962,6 +1086,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f7 6s2",
                         FirstIonisationEnergy = "547.0",
+                        X_Position = 9,
+                        Y_Position = 9,
                         MeltingPoint = "1095",
                         BoilingPoint = "1800"
                     },
@@ -977,6 +1103,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f7 5d1 6s2",
                         FirstIonisationEnergy = "593.0",
+                        X_Position = 10,
+                        Y_Position = 9,
                         MeltingPoint = "1586",
                         BoilingPoint = "3523"
                     },
@@ -992,6 +1120,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f9 6s2",
                         FirstIonisationEnergy = "566.0",
+                        X_Position = 11,
+                        Y_Position = 9,
                         MeltingPoint = "1629",
                         BoilingPoint = "3503"
                     },
@@ -1007,6 +1137,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f10 6s2",
                         FirstIonisationEnergy = "573.0",
+                        X_Position = 12,
+                        Y_Position = 9,
                         MeltingPoint = "1685",
                         BoilingPoint = "2840"
                     },
@@ -1022,6 +1154,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f11 6s2",
                         FirstIonisationEnergy = "581.0",
+                        X_Position = 13,
+                        Y_Position = 9,
                         MeltingPoint = "1747",
                         BoilingPoint = "2973"
                     },
@@ -1037,6 +1171,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f12 6s2",
                         FirstIonisationEnergy = "589.0",
+                        X_Position = 14,
+                        Y_Position = 9,
                         MeltingPoint = "1770",
                         BoilingPoint = "3141"
                     },
@@ -1052,6 +1188,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f13 6s2",
                         FirstIonisationEnergy = "597.0",
+                        X_Position = 15,
+                        Y_Position = 9,
                         MeltingPoint = "1818",
                         BoilingPoint = "2223"
                     },
@@ -1067,6 +1205,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 6s2",
                         FirstIonisationEnergy = "603.0",
+                        X_Position = 16,
+                        Y_Position = 9,
                         MeltingPoint = "1092",
                         BoilingPoint = "1469"
                     },
@@ -1082,6 +1222,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d1 6s2",
                         FirstIonisationEnergy = "524.0",
+                        X_Position = 17,
+                        Y_Position = 9,
                         MeltingPoint = "1936",
                         BoilingPoint = "3675"
                     },
@@ -1097,6 +1239,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d2 6s2",
                         FirstIonisationEnergy = "658.0",
+                        X_Position = 4,
+                        Y_Position = 6,
                         MeltingPoint = "2506",
                         BoilingPoint = "4876"
                     },
@@ -1112,6 +1256,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d3 6s2",
                         FirstIonisationEnergy = "761",
+                        X_Position = 5,
+                        Y_Position = 6,
                         MeltingPoint = "3290",
                         BoilingPoint = "5731"
                     },
@@ -1127,6 +1273,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d4 6s2",
                         FirstIonisationEnergy = "770",
+                        X_Position = 6,
+                        Y_Position = 6,
                         MeltingPoint = "3695",
                         BoilingPoint = "5828"
                     },
@@ -1142,6 +1290,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d5 6s2",
                         FirstIonisationEnergy = "760",
+                        X_Position = 7,
+                        Y_Position = 6,
                         MeltingPoint = "3459",
                         BoilingPoint = "5869"
                     },
@@ -1157,6 +1307,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d6 6s2",
                         FirstIonisationEnergy = "840",
+                        X_Position = 8,
+                        Y_Position = 6,
                         MeltingPoint = "3306",
                         BoilingPoint = "5285"
                     },
@@ -1172,6 +1324,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d7 6s2",
                         FirstIonisationEnergy = "880",
+                        X_Position = 9,
+                        Y_Position = 6,
                         MeltingPoint = "2739",
                         BoilingPoint = "4701"
                     },
@@ -1187,6 +1341,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d9 6s1",
                         FirstIonisationEnergy = "870",
+                        X_Position = 10,
+                        Y_Position = 6,
                         MeltingPoint = "2041",
                         BoilingPoint = "4098"
                     },
@@ -1202,6 +1358,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s1",
                         FirstIonisationEnergy = "890.0",
+                        X_Position = 11,
+                        Y_Position = 6,
                         MeltingPoint = "1337",
                         BoilingPoint = "3129"
                     },
@@ -1217,6 +1375,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2",
                         FirstIonisationEnergy = "1007.0",
+                        X_Position = 12,
+                        Y_Position = 6,
                         MeltingPoint = "234",
                         BoilingPoint = "630"
                     },
@@ -1228,10 +1388,12 @@ namespace PeriodicTable.Models
                         Symbol = "Tl",
                         AtomicMass = "204.38",
                         AtomicRadius = "148",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p1",
                         FirstIonisationEnergy = "589.0",
+                        X_Position = 13,
+                        Y_Position = 6,
                         MeltingPoint = "577",
                         BoilingPoint = "1746"
                     },
@@ -1243,10 +1405,12 @@ namespace PeriodicTable.Models
                         Symbol = "Pb",
                         AtomicMass = "207.21",
                         AtomicRadius = "147",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p2",
                         FirstIonisationEnergy = "716.0",
+                        X_Position = 14,
+                        Y_Position = 6,
                         MeltingPoint = "601",
                         BoilingPoint = "2022"
                     },
@@ -1258,10 +1422,12 @@ namespace PeriodicTable.Models
                         Symbol = "Bi",
                         AtomicMass = "208.98",
                         AtomicRadius = "146",
-                        GroupBlock = "metalloid",
+                        GroupBlock = "metal",
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p3",
                         FirstIonisationEnergy = "703",
+                        X_Position = 15,
+                        Y_Position = 6,
                         MeltingPoint = "544",
                         BoilingPoint = "1837"
                     },
@@ -1277,6 +1443,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p4",
                         FirstIonisationEnergy = "812.0",
+                        X_Position = 16,
+                        Y_Position = 6,
                         MeltingPoint = "527",
                         BoilingPoint = "1235"
                     },
@@ -1292,6 +1460,8 @@ namespace PeriodicTable.Models
                         BondingType = "covalent network",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p5",
                         FirstIonisationEnergy = "899.0",
+                        X_Position = 17,
+                        Y_Position = 6,
                         MeltingPoint = "575",
                         BoilingPoint = ""
                     },
@@ -1307,9 +1477,12 @@ namespace PeriodicTable.Models
                         BondingType = "atomic",
                         ElectronConfiguration = "[Xe] 4f14 5d10 6s2 6p6",
                         FirstIonisationEnergy = "1037",
+                        X_Position = 18,
+                        Y_Position = 6,
                         MeltingPoint = "202",
                         BoilingPoint = "211"
                     },
+
 
                     new Element
                     {
@@ -1322,6 +1495,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 7s1",
                         FirstIonisationEnergy = "380",
+                        X_Position = 1,
+                        Y_Position = 7,
                         MeltingPoint = "27",
                         BoilingPoint = "676.8"
                     },
@@ -1337,6 +1512,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 7s2",
                         FirstIonisationEnergy = "509.0",
+                        X_Position = 2,
+                        Y_Position = 7,
                         MeltingPoint = "973",
                         BoilingPoint = "2010"
                     },
@@ -1352,6 +1529,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 6d1 7s2",
                         FirstIonisationEnergy = "499",
+                        X_Position = 3,
+                        Y_Position = 10,
                         MeltingPoint = "1323",
                         BoilingPoint = "3473"
                     },
@@ -1367,6 +1546,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 6d2 7s2",
                         FirstIonisationEnergy = "587",
+                        X_Position = 4,
+                        Y_Position = 10,
                         MeltingPoint = "2023",
                         BoilingPoint = "5093"
                     },
@@ -1382,6 +1563,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f2 6d1 7s2",
                         FirstIonisationEnergy = "568",
+                        X_Position = 5,
+                        Y_Position = 10,
                         MeltingPoint = "1845",
                         BoilingPoint = "4273"
                     },
@@ -1397,6 +1580,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f3 6d1 7s2",
                         FirstIonisationEnergy = "598.0",
+                        X_Position = 6,
+                        Y_Position = 10,
                         MeltingPoint = "1408",
                         BoilingPoint = "4200"
                     },
@@ -1412,6 +1597,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f4 6d1 7s2",
                         FirstIonisationEnergy = "604.0",
+                        X_Position = 7,
+                        Y_Position = 10,
                         MeltingPoint = "917",
                         BoilingPoint = "4273"
                     },
@@ -1427,6 +1614,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f6 7s2",
                         FirstIonisationEnergy = "585.0",
+                        X_Position = 8,
+                        Y_Position = 10,
                         MeltingPoint = "913",
                         BoilingPoint = "3503"
                     },
@@ -1442,6 +1631,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f7 7s2",
                         FirstIonisationEnergy = "578",
+                        X_Position = 9,
+                        Y_Position = 10,
                         MeltingPoint = "1449",
                         BoilingPoint = "2284"
                     },
@@ -1457,6 +1648,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f7 6d1 7s2",
                         FirstIonisationEnergy = "581",
+                        X_Position = 10,
+                        Y_Position = 10,
                         MeltingPoint = "1618",
                         BoilingPoint = "3383"
                     },
@@ -1472,6 +1665,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f9 7s2",
                         FirstIonisationEnergy = "601",
+                        X_Position = 11,
+                        Y_Position = 10,
                         MeltingPoint = "1323",
                         BoilingPoint = ""
                     },
@@ -1487,6 +1682,8 @@ namespace PeriodicTable.Models
                         BondingType = "metallic",
                         ElectronConfiguration = "[Rn] 5f10 7s2",
                         FirstIonisationEnergy = "608",
+                        X_Position = 12,
+                        Y_Position = 10,
                         MeltingPoint = "1173",
                         BoilingPoint = ""
                     },
@@ -1502,6 +1699,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f11 7s2",
                         FirstIonisationEnergy = "619",
+                        X_Position = 13,
+                        Y_Position = 10,
                         MeltingPoint = "1133",
                         BoilingPoint = ""
                     },
@@ -1517,6 +1716,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f12 7s2",
                         FirstIonisationEnergy = "627",
+                        X_Position = 14,
+                        Y_Position = 10,
                         MeltingPoint = "1800",
                         BoilingPoint = ""
                     },
@@ -1532,6 +1733,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f13 7s2",
                         FirstIonisationEnergy = "635",
+                        X_Position = 15,
+                        Y_Position = 10,
                         MeltingPoint = "1100",
                         BoilingPoint = ""
                     },
@@ -1547,6 +1750,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 7s2",
                         FirstIonisationEnergy = "642",
+                        X_Position = 16,
+                        Y_Position = 10,
                         MeltingPoint = "1100",
                         BoilingPoint = ""
                     },
@@ -1562,6 +1767,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 7s2 7p1",
                         FirstIonisationEnergy = "470",
+                        X_Position = 17,
+                        Y_Position = 10,
                         MeltingPoint = "1900",
                         BoilingPoint = ""
                     },
@@ -1577,6 +1784,8 @@ namespace PeriodicTable.Models
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d2 7s2",
                         FirstIonisationEnergy = "580",
+                        X_Position = 4,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1591,6 +1800,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d3 7s2",
+                        X_Position = 5,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1605,6 +1816,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d4 7s2",
+                        X_Position = 6,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1619,6 +1832,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d5 7s2",
+                        X_Position = 7,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1633,6 +1848,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d6 7s2",
+                        X_Position = 8,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1647,6 +1864,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d7 7s2",
+                        X_Position = 9,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1661,6 +1880,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d9 7s1",
+                        X_Position = 10,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1675,6 +1896,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s1",
+                        X_Position = 11,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1689,6 +1912,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2",
+                        X_Position = 12,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1703,6 +1928,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "post-transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p1",
+                        X_Position = 13,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1717,6 +1944,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "post-transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p2",
+                        X_Position = 14,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1731,6 +1960,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "post-transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p3",
+                        X_Position = 15,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1745,6 +1976,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "post-transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p4",
+                        X_Position = 16,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1759,6 +1992,8 @@ namespace PeriodicTable.Models
                         GroupBlock = "post-transition metal",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p5",
+                        X_Position = 17,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     },
@@ -1773,9 +2008,12 @@ namespace PeriodicTable.Models
                         GroupBlock = "noble gas",
                         BondingType = "",
                         ElectronConfiguration = "[Rn] 5f14 6d10 7s2 7p6",
+                        X_Position = 18,
+                        Y_Position = 7,
                         MeltingPoint = "",
                         BoilingPoint = ""
                     }
+
                 );
                 context.SaveChanges();
             }

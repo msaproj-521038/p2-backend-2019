@@ -20,6 +20,8 @@ namespace PeriodicTable.Migrations
                     AtomicMass = table.Column<string>(nullable: true),
                     AtomicRadius = table.Column<string>(nullable: true),
                     FirstIonisationEnergy = table.Column<string>(nullable: true),
+                    X_Position = table.Column<int>(nullable: false),
+                    Y_Position = table.Column<int>(nullable: false),
                     MeltingPoint = table.Column<string>(nullable: true),
                     BoilingPoint = table.Column<string>(nullable: true)
                 },

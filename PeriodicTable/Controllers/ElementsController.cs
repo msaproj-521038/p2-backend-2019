@@ -95,6 +95,56 @@ namespace PeriodicTable.Controllers
             return returned;
         }
 
+        // PUT: api/Elements/id/5
+        [HttpPut("id/{id}")]
+        public async Task<IActionResult> PutElement(int id, Element element)
+        {
+            if (id != element.AtomicNumber)
+            {
+                return BadRequest();
+            }
+            _context.Entry(element).State = EntityState.Modified;
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ElementExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            return NoContent();
+        }
+
+        // POST: api/Elements/new
+        [HttpPost("new/")]
+        public async Task<ActionResult<Element>> PostElement(Element element)
+        {
+            _context.Element.Add(element);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction("GetElement", new { id = element.AtomicNumber }, element);
+        }
+
+        // DELETE: api/Elements/5
+        [HttpDelete("id/{id}")]
+        public async Task<ActionResult<Element>> DeleteElement(int id)
+        {
+            var element = await _context.Element.FindAsync(id);
+            if (element == null)
+            {
+                return NotFound();
+            }
+            _context.Element.Remove(element);
+            await _context.SaveChangesAsync();
+            return element;
+        }
+
         private bool ElementExists(int id)
         {
             return _context.Element.Any(e => e.AtomicNumber == id);

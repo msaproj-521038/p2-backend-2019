@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 namespace PeriodicTableUnitTest
 {
     [TestClass]
-    class SearchControllerUnitTest
+    public class SearchControllerUnitTest
     {
-        public static readonly DbContextOptions<PeriodicTableContext> options
+        public static DbContextOptions<PeriodicTableContext> options
         = new DbContextOptionsBuilder<PeriodicTableContext>()
         .UseInMemoryDatabase(databaseName: "testDatabase")
         .Options;
@@ -133,9 +133,9 @@ namespace PeriodicTableUnitTest
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.GetElements();
-
+                
                 // Check that the results are returned
-                Assert.IsNotNull(result);
+                Assert.IsTrue(result.ToString().Length > 50);
             }
         }
 
@@ -158,7 +158,7 @@ namespace PeriodicTableUnitTest
             using (var context = new PeriodicTableContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
-                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helim");
+                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helimum");
 
                 // Check that the results are returned
                 Assert.IsNull(result);
