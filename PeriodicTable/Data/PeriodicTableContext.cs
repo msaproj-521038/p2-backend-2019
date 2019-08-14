@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using PeriodicTable.Model;
 
 namespace PeriodicTable.Models
 {
@@ -13,6 +14,6 @@ namespace PeriodicTable.Models
         {
         }
 
-        public DbSet<PeriodicTable.Models.Element> Element { get; set; }
+        public DbSet<PeriodicTable.Model.Element> Element { get; set; }
     }
 }

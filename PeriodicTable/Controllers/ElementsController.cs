@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PeriodicTable.Model;
 using PeriodicTable.Models;
 
 namespace PeriodicTable.Controllers
@@ -22,14 +23,14 @@ namespace PeriodicTable.Controllers
 
         // GET: api/Elements
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Element>>> GetElements()
+        public async Task<ActionResult<IEnumerable<Element>>> GetElement()
         {
             return await _context.Element.ToListAsync();
         }
 
-        // GET: api/Elements/id/5
+        // GET: api/Elements/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Element>> GetElementById(int id)
+        public async Task<ActionResult<Element>> GetElement(int id)
         {
             var element = await _context.Element.FindAsync(id);
 
@@ -41,7 +42,7 @@ namespace PeriodicTable.Controllers
             return element;
         }
 
-        // PUT: api/Elements/id/5
+        // PUT: api/Elements/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutElement(int id, Element element)
         {
@@ -49,7 +50,9 @@ namespace PeriodicTable.Controllers
             {
                 return BadRequest();
             }
+
             _context.Entry(element).State = EntityState.Modified;
+
             try
             {
                 await _context.SaveChangesAsync();
@@ -65,19 +68,21 @@ namespace PeriodicTable.Controllers
                     throw;
                 }
             }
+
             return NoContent();
         }
 
-        // POST: api/Elements/
+        // POST: api/Elements
         [HttpPost]
         public async Task<ActionResult<Element>> PostElement(Element element)
         {
             _context.Element.Add(element);
             await _context.SaveChangesAsync();
+
             return CreatedAtAction("GetElement", new { id = element.AtomicNumber }, element);
         }
 
-        // DELETE: api/Elements/id/5
+        // DELETE: api/Elements/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Element>> DeleteElement(int id)
         {
@@ -86,8 +91,10 @@ namespace PeriodicTable.Controllers
             {
                 return NotFound();
             }
+
             _context.Element.Remove(element);
             await _context.SaveChangesAsync();
+
             return element;
         }
 
