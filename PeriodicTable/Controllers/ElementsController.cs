@@ -122,8 +122,8 @@ namespace PeriodicTable.Controllers
             return NoContent();
         }
 
-        // POST: api/Elements/new
-        [HttpPost("new/")]
+        // POST: api/Elements/
+        [HttpPost]
         public async Task<ActionResult<Element>> PostElement(Element element)
         {
             _context.Element.Add(element);
