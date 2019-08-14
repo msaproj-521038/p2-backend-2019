@@ -31,14 +31,14 @@ namespace PeriodicTable
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddJsonOptions(
             options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
 
-            services.AddDbContext<PeriodicTableContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("PeriodicTableContext")));
-
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Periodic Elements Bank", Version = "v1" });
             });
+
+            services.AddDbContext<PeriodicTableContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PeriodicTableContext")));
 
         }
 

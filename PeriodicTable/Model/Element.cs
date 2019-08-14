@@ -21,19 +21,14 @@ namespace PeriodicTable.Model
         public string BondingType { get; set; }
         [Column(TypeName = "text")]
         public string GroupBlock { get; set; }
-        [Column(TypeName = "text")]
-        public string AtomicMass { get; set; }
-        [Column(TypeName = "text")]
-        public string AtomicRadius { get; set; }
-        [Column(TypeName = "text")]
-        public string FirstIonisationEnergy { get; set; }
+        public float? AtomicMass { get; set; }
+        public int? AtomicRadius { get; set; }
+        public int? FirstIonisationEnergy { get; set; }
         [Column("X_Position")]
         public int XPosition { get; set; }
         [Column("Y_Position")]
         public int YPosition { get; set; }
-        [Column(TypeName = "text")]
-        public string MeltingPoint { get; set; }
-        [Column(TypeName = "text")]
-        public string BoilingPoint { get; set; }
+        public int? MeltingPoint { get; set; }
+        public int? BoilingPoint { get; set; }
     }
 }
