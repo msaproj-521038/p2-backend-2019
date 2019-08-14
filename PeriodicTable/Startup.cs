@@ -32,7 +32,7 @@ namespace PeriodicTable
             options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
 
             services.AddDbContext<PeriodicTableContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("PeriodicTableContext")));
+                    options.UseSqlServer(Configuration.GetConnectionString("PeriodicTableContext")));
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
