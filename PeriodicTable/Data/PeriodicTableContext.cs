@@ -14,6 +14,10 @@ namespace PeriodicTable.Models
         {
         }
 
-        public DbSet<PeriodicTable.Model.Element> Element { get; set; }
+        public DbSet<PeriodicTable.Model.ElementsBasicInformation> ElementsBasicInformation { get; set; }
+
+        public DbSet<PeriodicTable.Model.ElementsExtraInformation> ElementsExtraInformation { get; set; }
+
+        public DbSet<PeriodicTable.Model.UserInfo> UserInfo { get; set; }
     }
 }

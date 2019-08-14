@@ -39,7 +39,6 @@ namespace PeriodicTable
 
             services.AddDbContext<PeriodicTableContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("PeriodicTableContext")));
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
