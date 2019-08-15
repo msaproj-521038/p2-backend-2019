@@ -6,29 +6,28 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeriodicTable.Model;
-using PeriodicTable.Models;
 
 namespace PeriodicTable.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ElementsBasicInformationsController : ControllerBase
+    public class ElementsBasicInformationController : ControllerBase
     {
         private readonly PeriodicTableContext _context;
 
-        public ElementsBasicInformationsController(PeriodicTableContext context)
+        public ElementsBasicInformationController(PeriodicTableContext context)
         {
             _context = context;
         }
 
-        // GET: api/ElementsBasicInformations
+        // GET: api/ElementsBasicInformation
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ElementsBasicInformation>>> GetElementsBasicInformation()
         {
             return await _context.ElementsBasicInformation.ToListAsync();
         }
 
-        // GET: api/ElementsBasicInformations/5
+        // GET: api/ElementsBasicInformation/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ElementsBasicInformation>> GetElementsBasicInformation(int id)
         {
@@ -42,7 +41,7 @@ namespace PeriodicTable.Controllers
             return elementsBasicInformation;
         }
 
-        // PUT: api/ElementsBasicInformations/5
+        // PUT: api/ElementsBasicInformation/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutElementsBasicInformation(int id, ElementsBasicInformation elementsBasicInformation)
         {
@@ -72,7 +71,7 @@ namespace PeriodicTable.Controllers
             return NoContent();
         }
 
-        // POST: api/ElementsBasicInformations
+        // POST: api/ElementsBasicInformation
         [HttpPost]
         public async Task<ActionResult<ElementsBasicInformation>> PostElementsBasicInformation(ElementsBasicInformation elementsBasicInformation)
         {
@@ -82,7 +81,7 @@ namespace PeriodicTable.Controllers
             return CreatedAtAction("GetElementsBasicInformation", new { id = elementsBasicInformation.AtomicNumber }, elementsBasicInformation);
         }
 
-        // DELETE: api/ElementsBasicInformations/5
+        // DELETE: api/ElementsBasicInformation/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<ElementsBasicInformation>> DeleteElementsBasicInformation(int id)
         {

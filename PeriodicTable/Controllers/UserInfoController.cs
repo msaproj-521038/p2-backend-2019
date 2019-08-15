@@ -6,29 +6,28 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeriodicTable.Model;
-using PeriodicTable.Models;
 
 namespace PeriodicTable.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserInfoesController : ControllerBase
+    public class UserInfoController : ControllerBase
     {
         private readonly PeriodicTableContext _context;
 
-        public UserInfoesController(PeriodicTableContext context)
+        public UserInfoController(PeriodicTableContext context)
         {
             _context = context;
         }
 
-        // GET: api/UserInfoes
+        // GET: api/UserInfo
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserInfo>>> GetUserInfo()
         {
             return await _context.UserInfo.ToListAsync();
         }
 
-        // GET: api/UserInfoes/5
+        // GET: api/UserInfo/5
         [HttpGet("{id}")]
         public async Task<ActionResult<UserInfo>> GetUserInfo(int id)
         {
@@ -42,7 +41,7 @@ namespace PeriodicTable.Controllers
             return userInfo;
         }
 
-        // PUT: api/UserInfoes/5
+        // PUT: api/UserInfo/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUserInfo(int id, UserInfo userInfo)
         {
@@ -72,7 +71,7 @@ namespace PeriodicTable.Controllers
             return NoContent();
         }
 
-        // POST: api/UserInfoes
+        // POST: api/UserInfo
         [HttpPost]
         public async Task<ActionResult<UserInfo>> PostUserInfo(UserInfo userInfo)
         {
@@ -82,7 +81,7 @@ namespace PeriodicTable.Controllers
             return CreatedAtAction("GetUserInfo", new { id = userInfo.UserId }, userInfo);
         }
 
-        // DELETE: api/UserInfoes/5
+        // DELETE: api/UserInfo/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<UserInfo>> DeleteUserInfo(int id)
         {

@@ -6,29 +6,28 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PeriodicTable.Model;
-using PeriodicTable.Models;
 
 namespace PeriodicTable.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ElementsExtraInformationsController : ControllerBase
+    public class ElementsExtraInformationController : ControllerBase
     {
         private readonly PeriodicTableContext _context;
 
-        public ElementsExtraInformationsController(PeriodicTableContext context)
+        public ElementsExtraInformationController(PeriodicTableContext context)
         {
             _context = context;
         }
 
-        // GET: api/ElementsExtraInformations
+        // GET: api/ElementsExtraInformation
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ElementsExtraInformation>>> GetElementsExtraInformation()
         {
             return await _context.ElementsExtraInformation.ToListAsync();
         }
 
-        // GET: api/ElementsExtraInformations/5
+        // GET: api/ElementsExtraInformation/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ElementsExtraInformation>> GetElementsExtraInformation(int id)
         {
@@ -42,7 +41,7 @@ namespace PeriodicTable.Controllers
             return elementsExtraInformation;
         }
 
-        // PUT: api/ElementsExtraInformations/5
+        // PUT: api/ElementsExtraInformation/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutElementsExtraInformation(int id, ElementsExtraInformation elementsExtraInformation)
         {
@@ -72,17 +71,31 @@ namespace PeriodicTable.Controllers
             return NoContent();
         }
 
-        // POST: api/ElementsExtraInformations
+        // POST: api/ElementsExtraInformation
         [HttpPost]
         public async Task<ActionResult<ElementsExtraInformation>> PostElementsExtraInformation(ElementsExtraInformation elementsExtraInformation)
         {
             _context.ElementsExtraInformation.Add(elementsExtraInformation);
-            await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (ElementsExtraInformationExists(elementsExtraInformation.AtomicNumber))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
 
             return CreatedAtAction("GetElementsExtraInformation", new { id = elementsExtraInformation.AtomicNumber }, elementsExtraInformation);
         }
 
-        // DELETE: api/ElementsExtraInformations/5
+        // DELETE: api/ElementsExtraInformation/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<ElementsExtraInformation>> DeleteElementsExtraInformation(int id)
         {

@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
-using PeriodicTable.Models;
+using PeriodicTable.Model;
 
 namespace PeriodicTable
 {

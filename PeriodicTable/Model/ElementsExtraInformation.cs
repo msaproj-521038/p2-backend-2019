@@ -19,5 +19,9 @@ namespace PeriodicTable.Model
         public int? FirstIonisationEnergy { get; set; }
         public int? MeltingPoint { get; set; }
         public int? BoilingPoint { get; set; }
+
+        [ForeignKey("AtomicNumber")]
+        [InverseProperty("ElementsExtraInformation")]
+        public virtual ElementsBasicInformation AtomicNumberNavigation { get; set; }
     }
 }
