@@ -31,6 +31,8 @@ namespace PeriodicTableUnitTest
                 BondingType = "diatomic",
                 ElectronConfiguration = "1s1",
                 FirstIonisationEnergy = "1312.0",
+                X_Position = 1,
+                Y_Position = 1,
                 MeltingPoint = "14",
                 BoilingPoint = "20"
             },
@@ -46,6 +48,8 @@ namespace PeriodicTableUnitTest
                 BondingType = "atomic",
                 ElectronConfiguration = "1s2",
                 FirstIonisationEnergy = "2372.0",
+                X_Position = 18,
+                Y_Position = 1,
                 MeltingPoint = "1",
                 BoilingPoint = "4"
             },
@@ -61,6 +65,8 @@ namespace PeriodicTableUnitTest
                 BondingType = "metallic",
                 ElectronConfiguration = "[He] 2s1",
                 FirstIonisationEnergy = "520.0",
+                X_Position = 1,
+                Y_Position = 2,
                 MeltingPoint = "454",
                 BoilingPoint = "1615"
             },
@@ -76,6 +82,8 @@ namespace PeriodicTableUnitTest
                 BondingType = "metallic",
                 ElectronConfiguration = "[He] 2s2",
                 FirstIonisationEnergy = "900.0",
+                X_Position = 2,
+                Y_Position = 2,
                 MeltingPoint = "1560",
                 BoilingPoint = "2743"
             },
@@ -91,10 +99,11 @@ namespace PeriodicTableUnitTest
                 BondingType = "covalent network",
                 ElectronConfiguration = "[He] 2s2 2p1",
                 FirstIonisationEnergy = "801.0",
+                X_Position = 13,
+                Y_Position = 2,
                 MeltingPoint = "2348",
                 BoilingPoint = "4273"
             },
-
             new Element
             {
                 AtomicNumber = 6,
@@ -106,9 +115,11 @@ namespace PeriodicTableUnitTest
                 BondingType = "covalent network",
                 ElectronConfiguration = "[He] 2s2 2p2",
                 FirstIonisationEnergy = "1086.0",
+                X_Position = 14,
+                Y_Position = 2,
                 MeltingPoint = "3823",
                 BoilingPoint = "4300"
-            },
+            }
         };
 
         [TestInitialize]
@@ -134,8 +145,8 @@ namespace PeriodicTableUnitTest
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.GetElements();
                 
-                // Check that the results are returned
-                Assert.IsTrue(result.ToString().Length > 50);
+                // Check that there are five results returned
+                Assert.IsTrue(result.Value.Count() == 5);
             }
         }
 
@@ -148,21 +159,124 @@ namespace PeriodicTableUnitTest
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helium");
 
                 // Check that the results are returned
-                Assert.IsNotNull(result);
+                Assert.IsTrue(result.Value.ElementAt(0).Name.Equals("Helium"));
             }
         }
 
         [TestMethod]
-        public async Task TestSearchByNameReturnsNullSuccessfully()
+        public async Task TestSearchByNameReturnsNothingSuccessfully()
         {
             using (var context = new PeriodicTableContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helimum");
 
-                // Check that the results are returned
-                Assert.IsNull(result);
+                // Check that it returns a null json item as name does not exist
+                Assert.IsTrue(result.Value.Count() == 0);
             }
+        }
+
+        [TestMethod]
+        public async Task TestSearchBySymbolSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementBySymbol("He");
+
+                // Check that the results are returned
+                Assert.IsTrue(result.Value.ElementAt(0).Symbol.Equals("He"));
+            }
+        }
+
+        [TestMethod]
+        public async Task TestSearchByGroupSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByGroup("alkaline");
+
+                // Check that the results are returned. Berylium is the only alkaline metal so check that result is there.
+                // Also another test to check that you do not need to spell the whole group exactly.
+                // Actual result's group should be "alkaline earth metal"
+                Assert.IsTrue(result.Value.ElementAt(0).GroupBlock.Contains("alkaline"));
+            }
+        }
+
+        [TestMethod]
+        public async Task TestAddElementSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                Element nitrogen = new Element
+                {
+                    AtomicNumber = 7,
+                    Name = "Nitrogen",
+                    Symbol = "N",
+                    AtomicMass = "14.007",
+                    AtomicRadius = "75",
+                    GroupBlock = "nonmetal",
+                    BondingType = "diatomic",
+                    ElectronConfiguration = "[He] 2s2 2p3",
+                    FirstIonisationEnergy = "1402.0",
+                    X_Position = 15,
+                    Y_Position = 2,
+                    MeltingPoint = "63",
+                    BoilingPoint = "77"
+                };
+                ActionResult<Element> result = await ElementsController.PostElement(nitrogen);
+                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElements();
+
+                // Check that the list of element count is 6 as one element is added.
+                Assert.IsTrue(Finalresult.Value.Count() == 6);
+            }
+        }
+
+        [TestMethod]
+        public async Task TestChangeElementSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                Element helium = new Element
+                {
+                    AtomicNumber = 2,
+                    Name = "Helium",
+                    Symbol = "He",
+                    AtomicMass = "4.003",
+                    AtomicRadius = "32",
+                    GroupBlock = "noble gas",
+                    BondingType = "atomic",
+                    ElectronConfiguration = "1s2",
+                    FirstIonisationEnergy = "2372.0",
+                    X_Position = 18,
+                    Y_Position = 1,
+                    MeltingPoint = "",
+                    BoilingPoint = "4"
+                };
+                IActionResult result = await ElementsController.PutElement(2,helium);
+                ActionResult<Element> Finalresult = await ElementsController.GetElementById(2);
+
+                // Check that helium's melting point is changed from "1" to "".
+                Assert.IsTrue(Finalresult.Value.MeltingPoint.Equals(""));
+            }
+        }
+
+        [TestMethod]
+        public async Task TestDeleteElementSuccessfully()
+        {
+            using (var context = new PeriodicTableContext(options))
+            {
+                ElementsController ElementsController = new ElementsController(context);
+                ActionResult<Element> result = await ElementsController.DeleteElement(3);
+
+                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElements();
+
+                // Check that the list of element count is 4 as one element is removed.
+                Assert.IsTrue(Finalresult.Value.Count() == 4);
+            };
         }
 
         [TestCleanup]
