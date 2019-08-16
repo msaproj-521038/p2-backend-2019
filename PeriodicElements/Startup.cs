@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 using PeriodicElements.Models;
 using Swashbuckle.AspNetCore.Swagger;
+using PeriodicElements.CentralHub;
 
 namespace PeriodicElements
 {
@@ -37,11 +38,30 @@ namespace PeriodicElements
             {
                 c.SwaggerDoc("v1", new Info { Title = "Periodic Elements Bank", Version = "v1" });
             });
+
+            //Registering Azure SignalR service
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            // Make sure the CORS middleware is ahead of SignalR.
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://localhost:3000")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
+            });
+
+            // SignalR
+            app.UseFileServer();
+            app.UseSignalR(routes =>
+            {
+                routes.MapHub<SignalRHub>("/hub");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
