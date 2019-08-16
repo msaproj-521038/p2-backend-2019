@@ -1,5 +1,4 @@
-﻿/*
-using PeriodicTable.Controllers;
+﻿using PeriodicTable.Controllers;
 using PeriodicTable.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -292,4 +291,3 @@ namespace PeriodicTableUnitTest
         }
     }
 }
-*/
