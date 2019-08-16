@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace PeriodicTable.Migrations
+namespace PeriodicElements.Migrations
 {
     public partial class InitialCreate : Migration
     {

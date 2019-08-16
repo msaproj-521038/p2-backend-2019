@@ -11,10 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using PeriodicTable.Models;
+using PeriodicElements.Models;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace PeriodicTable
+namespace PeriodicElements
 {
     public class Startup
     {
@@ -28,13 +28,11 @@ namespace PeriodicTable
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddJsonOptions(
-            options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<PeriodicTableContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("PeriodicTableContext")));
+            services.AddDbContext<PeriodicElementsContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("PeriodicElementsContext")));
 
-            // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Periodic Elements Bank", Version = "v1" });

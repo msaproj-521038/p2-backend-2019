@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using PeriodicTable.Models;
+using PeriodicElements.Models;
 
-namespace PeriodicTable
+namespace PeriodicElements
 {
     public class Program
     {
@@ -25,7 +25,7 @@ namespace PeriodicTable
 
                 try
                 {
-                    var context = services.GetRequiredService<PeriodicTableContext>();
+                    var context = services.GetRequiredService<PeriodicElementsContext>();
                     context.Database.Migrate();
                     Data.Initialize(services);
                 }

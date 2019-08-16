@@ -5,14 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PeriodicTable.Models
+namespace PeriodicElements.Models
 {
     public static class Data
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new PeriodicTableContext(
-                serviceProvider.GetRequiredService<DbContextOptions<PeriodicTableContext>>()))
+            using (var context = new PeriodicElementsContext(
+                serviceProvider.GetRequiredService<DbContextOptions<PeriodicElementsContext>>()))
             {
                 // Check that that the elements are present.
                 if (context.Element.Count() > 0)

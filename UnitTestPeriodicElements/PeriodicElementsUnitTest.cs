@@ -1,9 +1,11 @@
-﻿using PeriodicTable.Controllers;
-using PeriodicTable.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using PeriodicElements.Controllers;
+using PeriodicElements.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
@@ -13,8 +15,8 @@ namespace PeriodicTableUnitTest
     [TestClass]
     public class SearchControllerUnitTest
     {
-        public static DbContextOptions<PeriodicTableContext> options
-        = new DbContextOptionsBuilder<PeriodicTableContext>()
+        public static DbContextOptions<PeriodicElementsContext> options
+        = new DbContextOptionsBuilder<PeriodicElementsContext>()
         .UseInMemoryDatabase(databaseName: "testDatabase")
         .Options;
 
@@ -125,7 +127,7 @@ namespace PeriodicTableUnitTest
         [TestInitialize]
         public void SetupDb()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 // populate the db
                 context.Element.Add(Elements[0]);
@@ -140,11 +142,11 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestGetElementsSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
-                ActionResult<IEnumerable<Element>> result = await ElementsController.GetElements();
-                
+                ActionResult<IEnumerable<Element>> result = await ElementsController.GetElement();
+
                 // Check that there are five results returned
                 Assert.IsTrue(result.Value.Count() == 5);
             }
@@ -153,7 +155,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestSearchByNameSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helium");
@@ -166,7 +168,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestSearchByNameReturnsNothingSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByName("Helimum");
@@ -179,7 +181,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestSearchBySymbolSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementBySymbol("He");
@@ -192,7 +194,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestSearchByGroupSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<IEnumerable<Element>> result = await ElementsController.SearchElementByGroup("alkaline");
@@ -207,7 +209,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestAddElementSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 Element nitrogen = new Element
@@ -227,7 +229,7 @@ namespace PeriodicTableUnitTest
                     BoilingPoint = "77"
                 };
                 ActionResult<Element> result = await ElementsController.PostElement(nitrogen);
-                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElements();
+                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElement();
 
                 // Check that the list of element count is 6 as one element is added.
                 Assert.IsTrue(Finalresult.Value.Count() == 6);
@@ -237,7 +239,7 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestChangeElementSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 Element helium = new Element
@@ -256,8 +258,8 @@ namespace PeriodicTableUnitTest
                     MeltingPoint = "",
                     BoilingPoint = "4"
                 };
-                IActionResult result = await ElementsController.PutElement(2,helium);
-                ActionResult<Element> Finalresult = await ElementsController.GetElementById(2);
+                IActionResult result = await ElementsController.PutElement(2, helium);
+                ActionResult<Element> Finalresult = await ElementsController.GetElement(2);
 
                 // Check that helium's melting point is changed from "1" to "".
                 Assert.IsTrue(Finalresult.Value.MeltingPoint.Equals(""));
@@ -267,12 +269,12 @@ namespace PeriodicTableUnitTest
         [TestMethod]
         public async Task TestDeleteElementSuccessfully()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 ElementsController ElementsController = new ElementsController(context);
                 ActionResult<Element> result = await ElementsController.DeleteElement(3);
 
-                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElements();
+                ActionResult<IEnumerable<Element>> Finalresult = await ElementsController.GetElement();
 
                 // Check that the list of element count is 4 as one element is removed.
                 Assert.IsTrue(Finalresult.Value.Count() == 4);
@@ -282,7 +284,7 @@ namespace PeriodicTableUnitTest
         [TestCleanup]
         public void ClearDb()
         {
-            using (var context = new PeriodicTableContext(options))
+            using (var context = new PeriodicElementsContext(options))
             {
                 // clear the db
                 context.Element.RemoveRange(context.Element);
