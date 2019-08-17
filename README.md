@@ -15,6 +15,8 @@ Current Database Format:
 | BondingType  | string  | NO   |
 | ElectronConfiguration  | string  | NO   |
 | FirstIonisationEnergy  | string  | NO   |
+| X_Position  | int  | NO  |
+| Y_Position  | int  | NO  |
 | MeltingPoint  | string  | NO   |
 | BoilingPoint  | string  | NO   |
 
