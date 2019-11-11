@@ -1,5 +1,5 @@
 # MSA-P2-API
-Periodic Table API for my Phase 2 of MSA
+Periodic Table API for my Phase 2 of MSA 2019
 
 ## Information
 Current Database Format:
